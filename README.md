@@ -100,6 +100,8 @@ Parameter Efficient Fine-Tuning (PEFT) overcomes the problems of consumer hardwa
   <br/>
 </details>
 
+<br/>
+
 <details>
   <summary style="list-style: none;"><b>▶️ Model Quantization?</b></summary>
 
@@ -235,8 +237,6 @@ Mixed precision training optimizes computational efficiency by using lower-preci
 These approaches provide advantages in terms of computational speed and efficiency, making them valuable for mixed precision training on specific hardware architectures.
     
 </details>
-
-<br/>
 
 <br/>
 
