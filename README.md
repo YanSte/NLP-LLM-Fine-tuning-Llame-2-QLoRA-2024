@@ -1,6 +1,6 @@
-# | NLP | LLM | Fine-tuning | Llama 2 QLoRA |
+# | NLP | LLM | Fine-tuning 2024 | Llama 2 QLoRA |
 
-## Natural Language Processing (NLP) and Large Language Models (LLM) with Fine-Tuning LLM Llama 2 with QLoRA
+## Natural Language Processing (NLP) and Large Language Models (LLM) with Fine-Tuning LLM Llama 2 with QLoRA in 2024
 
 ![Learning](https://t3.ftcdn.net/jpg/06/14/01/52/360_F_614015247_EWZHvC6AAOsaIOepakhyJvMqUu5tpLfY.jpg)
 
@@ -19,10 +19,6 @@ Fine-tuning uses a pre-trained model as a base and continues to train it with a 
 It is important to recognize that fine-tuning is model training. The training process remains a resource intensive, and time consuming effort. Albeit fine-tuning training time is greatly shortened as a result of having started from a pre-trained model. 
 
 <img src="https://github.com/YanSte/NLP-LLM-Fine-tuning-Trainer/blob/main/img_3.png?raw=true" alt="Learning" width="50%">
-
-### The Power of Fine-Tuning: An Overview
-
-Fine-tuning, a crucial aspect of adapting pre-trained models to specific tasks, has witnessed a revolutionary approach known as Low Rank Adaptation (LoRA). Unlike conventional fine-tuning methods, LoRA strategically freezes pre-trained model weights and introduces trainable rank decomposition matrices into the Transformer architecture's layers. This innovative technique significantly reduces the number of trainable parameters, leading to expedited fine-tuning processes and mitigated overfitting.
 
 **Here some definitions:**
 <br/>
@@ -362,19 +358,82 @@ Adding special tokens to a language model is crucial for training chat models. T
 - Sets the chat_template of the tokenizer, which is used to format the input data into a chat-like format. The default is chatml from OpenAI.
     
   <br/>
-</details>   
+</details> 
 
-### Prompt Datasets
+### Define our use case
 
-The utilization of chat prompts dataset during the fine-tuning of the model holds crucial significance due to several inherent advantages associated with the conversational nature of such data.
+In the process of fine-tuning Language Models (LLMs), it is crucial to have a clear understanding of your specific use case and the task you aim to address. This knowledge will guide you in selecting the most suitable pre-existing model or assist you in curating a dataset for the fine-tuning process. If your use case hasn't been defined yet, it is advisable to revisit your initial considerations. It's important to note that fine-tuning is not universally necessary for all scenarios. Prior to embarking on the fine-tuning journey, it is highly recommended to explore and assess already fine-tuned models or those available through APIs.
 
-The use of chat prompts during the fine-tuning of a model represents a potent strategy to enhance its capability in understanding and generating conversational texts. These prompts act as a bridge between training data and real-life situations, thereby strengthening the model's performance in applications such as chatbot response generation, virtual assistant systems, and other natural language processing tasks.
+
+### Author Note: 
+
+While the model demonstrates remarkable performance across various tasks in datasets, notable alterations in its generation capabilities may not be readily apparent.
+
+**👉🏿 So this is an example of how Fine tuning in 2024**
+
+This is why it is preferable to use a RAG to reduce hallucination about the task already present in the model in this case.
+
+### RAG vs Finetuning
+
+As the enthusiasm for Large Language Models (LLMs) continues to grow, numerous developers and organizations are actively engaged in creating applications that leverage their capabilities. Yet, when pre-trained LLMs fail to meet desired expectations, the pivotal question arises: How can we enhance the performance of the LLM application? This leads us to a critical juncture where we must deliberate on whether to employ Retrieval-Augmented Generation (RAG) or pursue model fine-tuning to optimize the outcomes.
+
+[RAG vs Finetuning — Which Is the Best Tool to Boost Your LLM Application? The definitive guide for choosing the right method for your use case](https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7)
+
+<img src="https://miro.medium.com/v2/resize:fit:1306/1*To-PwvmU47tqyxPzhar6vg.png" alt="Learning" width="50%">
+
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*its4VqhQxCxKUjMuLpM_VQ.png" alt="Learning" width="50%">
+
 
 ## Learning Objectives
 
 By the end of this notebook, you will gain expertise in the following areas:
 
 1. Learn how to effectively prepare datasets for training.
-2. Understand the process of fine-tuning the Llama 2 on QLoRA with SFTTrainer.
+2. Few shots learning 
+3. Understand the process of fine-tuning the Llama 2 on QLoRA with SFTTrainer in 2024.
 
+## Ressources
 
+- [How to Fine-Tune LLMs in 2024 with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl)
+
+- [TRL Supervised Fine-tuning Trainer](https://huggingface.co/docs/trl/sft_trainer)
+
+- [Doc Llama 2](https://huggingface.co/docs/transformers/model_doc/llama2)
+
+- [Instruction Tune a Base LLM Using Qlora with DeciML](https://deci.ai/blog/how-to-instruction-tune-a-base-llm-using-qlora-with-decilm-6b/)
+
+- [Practical Tips for Finetuning LLMs](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms)
+
+- [Controlled Generation of Large Language Models](https://arxiv.org/abs/2106.09685)
+
+- [Optimizing LLMs: A Step-by-Step Guide to Fine-Tuning with PEFT and Qlora](https://blog.lancedb.com/optimizing-llms-a-step-by-step-guide-to-fine-tuning-with-peft-and-qlora-22eddd13d25b)
+
+- [Fine-Tune LLAMA2 with QLORA in Google Colab](https://colab.research.google.com/github/ashishpatel26/LLM-Finetuning/blob/main/7.FineTune_LLAMA2_with_QLORA.ipynb#scrollTo=Y3IgtdTvAvTr)
+
+- [LLM Course Repository](https://github.com/mlabonne/llm-course?tab=readme-ov-file)
+
+- [How to Fine-Tune an LLM - Part 2: Instruction Tuning Llama 2](https://wandb.ai/capecape/alpaca_ft/reports/How-to-Fine-Tune-an-LLM-Part-2-Instruction-Tuning-Llama-2--Vmlldzo1NjY0MjE1)
+
+- [Fine-tune Llama 2 in Google Colab](https://github.com/Abonia1/LLM-finetuning/blob/main/Llama/Fine_tune_Llama_2_in_Google_Colab.ipynb)
+
+- [Fine-Tuning Llama 2 LLM on Google Colab: A Step-by-Step Guide](https://gathnex.medium.com/fine-tuning-llama-2-llm-on-google-colab-a-step-by-step-guide-dd79a788ac16)
+
+- [Fine-tune Llama 2 in Google Colab](https://github.com/Abonia1/LLM-finetuning/blob/main/Llama/Fine_tune_Llama_2_in_Google_Colab.ipynb)
+
+- [Finetuning Llama2 Mistral](https://medium.com/@geronimo7/finetuning-llama2-mistral-945f9c200611)
+
+- [Microsoft Docs - Chat Markup Language](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/ai-services/openai/includes/chat-markup-language.md)
+
+- [Mastering Llama 2: A Comprehensive Guide to Fine-Tuning in Google Colab](https://medium.com/artificial-corner/mastering-llama-2-a-comprehensive-guide-to-fine-tuning-in-google-colab-bedfcc692b7f)
+
+- [OpenAI introduced Chat Markup Language (ChatML) based input to non-chat modes](https://cobusgreyling.medium.com/openai-introduced-chat-markup-language-chatml-based-input-to-non-chat-modes-6ca4b267012f)
+
+- [Microsoft Docs - Chat Markup Language](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/ai-services/openai/includes/chat-markup-language.md)
+
+- [Implementing Few-Shot Learning with GPT](https://developer.dataiku.com/latest/tutorials/machine-learning/genai/nlp/gpt-few-shot-clf/index.html#implementing-few-shot-learning)
+
+- [Prompting Guide - Few-Shot Learning](https://www.promptingguide.ai/techniques/fewshot)
+
+- [Learn Prompting - Few-Shot Basics](https://learnprompting.org/docs/basics/few_shot)
+
+- [The Science of Control: How Temperature, Top-p, and Top-k Shape Large Language Models](https://medium.com/@daniel.puenteviejo/the-science-of-control-how-temperature-top-p-and-top-k-shape-large-language-models-853cb0480dae)
